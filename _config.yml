@@ -1,0 +1,35 @@
+# Dependencies
+markdown:            redcarpet
+highlighter:         pygments
+
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+relative_permalinks: true
+
+# Setup
+title:               Pagez
+tagline:             'Computer Security Study Blog'
+description:         'Pagez'
+url:                 http://blog.pagez.kr
+baseurl:             /
+paginate:            5
+
+disqusid:			
+
+# About/contact
+author:
+  name:              AhnMo
+  url:               http://pagez.kr
+  email:             ahnmo@pagez.kr
+
+# Custom vars
+version:             1.0.0
+
+excerpt_separator: ""
+
+#pages_list:       
+#  About: '/about'
+#  Archive: '/archive'
+#  Feed: '/atom.xml'
