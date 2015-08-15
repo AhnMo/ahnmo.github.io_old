@@ -9,8 +9,7 @@ title: Cracker
 </style>
 <div id="cracker">
 
-##Base64
-
+<h2>Base64</h2>
 <table class="box" id="base64">
 <tr><td><textarea></textarea></td></tr>
 <tr><td>
@@ -20,7 +19,7 @@ title: Cracker
 </td></tr>
 </table>
 
-##Base85
+<h2>Base85</h2>
 
 <table class="box" id="ascii85">
 <tr><td><textarea></textarea></td></tr>
@@ -30,7 +29,7 @@ title: Cracker
 </td></tr>
 </table>
 
-##MD4
+<h2>MD4</h2>
 
 <table class="box" id="md4">
 <tr><td><textarea></textarea></td></tr>
@@ -39,7 +38,7 @@ title: Cracker
 </td></tr>
 </table>
 
-##MD5
+<h2>MD5</h2>
 
 <table class="box" id="md5">
 <tr><td><textarea></textarea></td></tr>
@@ -55,7 +54,7 @@ title: Cracker
 </td></tr>
 </table>
 
-##SHA1
+<h2>SHA1</h2>
 
 <table class="box" id="sha1">
 <tr><td><textarea></textarea></td></tr>
@@ -64,7 +63,7 @@ title: Cracker
 </td></tr>
 </table>
 
-##SHA256
+<h2>SHA256</h2>
 
 <table class="box" id="sha2">
 <tr><td><textarea></textarea></td></tr>
@@ -73,7 +72,7 @@ title: Cracker
 </td></tr>
 </table>
 
-##Unescape
+<h2>Unescape</h2>
 
 <table class="box" id="unescape">
 <tr><td><textarea></textarea></td></tr>
@@ -83,7 +82,7 @@ title: Cracker
 </td></tr>
 </table>
 
-##Morse Code
+<h2>Morse Code</h2>
 
 <table class="box" id="morse">
 <tr><td><textarea></textarea></td></tr>
@@ -93,7 +92,7 @@ title: Cracker
 </td></tr>
 </table>
 
-##Unix Time
+<h2>Unix Time</h2>
 
 <table class="box" id="unixtime">
 <tr><td><input type="text" id="timestamp" /></td></tr>
@@ -108,9 +107,9 @@ title: Cracker
 </table>
 
 
-##SQL Utility
+<h2>SQL Utility</h2>
 
-###string2hex
+<h3>string2hex</h3>
 
 <table class="box" id="string2hex">
 <tr>
@@ -126,7 +125,7 @@ title: Cracker
 </tr>
 </table>
 
-###string2ascii
+<h3>string2ascii</h3>
 
 <table class="box" id="string2ascii">
 <tr>
@@ -144,7 +143,6 @@ title: Cracker
 </div>
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="/public/js/cracker/base64.js"></script>
 <script type="text/javascript" src="/public/js/cracker/base64.js"></script>
 <script type="text/javascript" src="/public/js/cracker/ascii85.js"></script>
 <script type="text/javascript" src="/public/js/cracker/md4.js"></script>
