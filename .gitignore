@@ -1,3 +1,5 @@
-_site/
-.sass-cache/
-todo.md
+_site
+.sass-cache
+.jekyll-metadata
+
+*.scss

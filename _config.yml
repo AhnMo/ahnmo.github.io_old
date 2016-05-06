@@ -1,35 +1,25 @@
-# Dependencies
-markdown:            redcarpet
-highlighter:         pygments
-
-# Permalinks
+# Welcome to Jekyll!
 #
-# Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
-relative_permalinks: true
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-# Setup
-title:               Pagez
-tagline:             'Computer Security Study Blog'
-description:         'Pagez'
-url:                 http://blog.pagez.kr
-baseurl:             /
-paginate:            5
+# Site settings
+title: Pagez
+email: ahnmo@pagez.kr
+description: > # this means to ignore newlines until "baseurl:"
+  LoL
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "http://blog.pagez.kr" # the base hostname & protocol for your site
+#twitter_username: jekyllrb
+#github_username:  jekyll
 
-disqusid:			
+gems: [jekyll-paginate]
 
-# About/contact
-author:
-  name:              AhnMo
-  url:               http://pagez.kr
-  email:             ahnmo@pagez.kr
+paginate: 5
+paginate_path: "/page/:num"
 
-# Custom vars
-version:             1.0.0
 
-excerpt_separator: ""
-
-#pages_list:       
-#  About: '/about'
-#  Archive: '/archive'
-#  Feed: '/atom.xml'
+# Build settings
+markdown: kramdown
