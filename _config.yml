@@ -1,35 +1,13 @@
-# Dependencies
-markdown:            redcarpet
-highlighter:         pygments
+title:              Pagez
+tagline:            'Computer Security Study Blog'
+description:        >
+  Pagez
+url:                http://blog.pagez.kr
 
-# Permalinks
-#
-# Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
-relative_permalinks: true
+email:              ahnmo@pagez.kr
 
-# Setup
-title:               Pagez
-tagline:             'Computer Security Study Blog'
-description:         'Pagez'
-url:                 http://blog.pagez.kr
-baseurl:             /
-paginate:            5
+baseurl:            /
 
-disqusid:			
-
-# About/contact
-author:
-  name:              AhnMo
-  url:               http://pagez.kr
-  email:             ahnmo@pagez.kr
-
-# Custom vars
-version:             1.0.0
-
-excerpt_separator: ""
-
-#pages_list:       
-#  About: '/about'
-#  Archive: '/archive'
-#  Feed: '/atom.xml'
+gems: [jekyll-paginate]
+paginate:           5
+paginate_path:      "/page/:num"

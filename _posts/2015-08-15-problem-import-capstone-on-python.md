@@ -6,7 +6,7 @@ comments: true
 
 인터넷에 아무리 찾아봐도 해결방법이 잘 안보이는데... 웬만해선 안 일어날 오류가 아닐까 싶다.
 
-{% highlight text %}
+```
 Python 2.7.6 (default, Mar 22 2014, 22:59:56) 
 [GCC 4.8.2] on linux2
 Type "help", "copyright", "credits" or "license" for more information.
@@ -21,7 +21,7 @@ ImportError: ERROR: fail to load the dynamic library.
 >>> quit
 Use quit() or Ctrl-D (i.e. EOF) to exit
 >>> 
-{% endhighlight %}
+```
 
 일단 내 상황은 capstone을 설치한다고 pip로 설치했었고, 잘 안되기래 [공식홈페이지](http://www.capstone-engine.org/download.html)에서 deb파일을 받아서 설치했었다. 
 
@@ -34,7 +34,7 @@ Use quit() or Ctrl-D (i.e. EOF) to exit
 나같은 또다른 멍청이가 안나오길 바라며 글을 남긴다.
 
 
-{% highlight text %}
+```
 $ sudo pip uninstall capstone
 Uninstalling capstone-2.1:
   /usr/local/lib/python2.7/dist-packages/capstone-2.1.egg-info
@@ -57,4 +57,4 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> import capstone
 >>> capstone
 <module 'capstone' from '/usr/lib/python2.7/dist-packages/capstone/__init__.pyc'>
-{% endhighlight %}
+```

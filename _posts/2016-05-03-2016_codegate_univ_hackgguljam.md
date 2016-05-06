@@ -10,7 +10,7 @@ comments: true
 달라진점 하나는 *firewall.php*가 추가가 됬다는 점이다.
 
 아래는 *index.php*에서 추가된 부분이다.
-{% highlight PHP %}
+```php
 <?php 
 if (isset($_GET['view-source'])) {
         show_source(__FILE__);
@@ -23,10 +23,10 @@ include("inc.php"); // Database Connected
 
 function getOperator(&$operator) { 
 ...
-{% endhighlight %}
+```
 
 아래는 새로 추가된 파일인 *firewall.php*이다.
-{% highlight PHP %}
+```php
 <?php
 
 if (isset($_GET['view-source'])) {
@@ -52,30 +52,30 @@ HackNoJam();
 
 function HackingLog() { }
 
-{% endhighlight %}
+```
 
 (따로 백업을 안해놔서 기억나는데로 작성했다.)
 
 문제 의도
 =====
-{% highlight PHP %}
+```php
 ...
 }
 
 parse_str($_SERVER['QUERY_STRING']); 
 getOperator($operator);
 ...
-{% endhighlight %}
+```
 *index.php*에서는 *$_SERVER['QUERY_STRING']*를 직접 parse_str을 한다.
 
-{% highlight PHP %}
+```php
 ...
 function HackNoJam() {
     $INFO = parse_url($_SERVER['REQUEST_URI']);
     parse_str($INFO['query'], $query); 
     $filter = ['select', 'union', 'information_schema', 'from'];
 ...
-{% endhighlight %}
+```
 반면, *firewall.php*에서는 *$_SERVER['REQUEST_URI']*를 *parse_url*로 분리한 후 *parse_str*을 한다.
 
 이를 보고 공략 포인트가 여기란 것을 알 수 있다.
@@ -84,14 +84,14 @@ function HackNoJam() {
 =====
 답은 [PHP: parse_url - Manual](http://php.net/manual/en/function.parse-url.php)에 있다.
 
-{% highlight PHP %}
+```php
 <?php
 $url = '//www.example.com/path?googleguy=googley';
 
 // Prior to 5.4.7 this would show the path as "//www.example.com/path"
 var_dump(parse_url($url));
 ?>
-{% endhighlight %}
+```
 
 위 코드에서 볼 수 있듯이 scheme를 생략한 형태로 parse_url을 사용할 수 있다. 
 

