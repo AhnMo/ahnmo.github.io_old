@@ -5,13 +5,14 @@ comments: true
 ---
 문제 개요
 ======
-문제의 기본 Base는 [wargame.kr의 dmbs335](http://wargame.kr:8080/dmbs335/)이다. 
+문제의 기본 Base는 [wargame.kr의 dmbs335](http://wargame.kr:8080/dmbs335/)이다.
 
 달라진점 하나는 *firewall.php*가 추가가 됬다는 점이다.
 
 아래는 *index.php*에서 추가된 부분이다.
+
 ```php
-<?php 
+<?php
 if (isset($_GET['view-source'])) {
         show_source(__FILE__);
         exit();
@@ -21,11 +22,12 @@ include("firewall.php"); // You can see this code : firewall.php?view-source
 
 include("inc.php"); // Database Connected
 
-function getOperator(&$operator) { 
+function getOperator(&$operator) {
 ...
 ```
 
 아래는 새로 추가된 파일인 *firewall.php*이다.
+
 ```php
 <?php
 
@@ -36,7 +38,7 @@ if (isset($_GET['view-source'])) {
 
 function HackNoJam() {
     $INFO = parse_url($_SERVER['REQUEST_URI']);
-    parse_str($INFO['query'], $query); 
+    parse_str($INFO['query'], $query);
     $filter = ['select', 'union', 'information_schema', 'from'];
     foreach ($query as $q) {
         foreach ($filter as $f) {
@@ -58,11 +60,12 @@ function HackingLog() { }
 
 문제 의도
 =====
+
 ```php
 ...
 }
 
-parse_str($_SERVER['QUERY_STRING']); 
+parse_str($_SERVER['QUERY_STRING']);
 getOperator($operator);
 ...
 ```
@@ -72,7 +75,7 @@ getOperator($operator);
 ...
 function HackNoJam() {
     $INFO = parse_url($_SERVER['REQUEST_URI']);
-    parse_str($INFO['query'], $query); 
+    parse_str($INFO['query'], $query);
     $filter = ['select', 'union', 'information_schema', 'from'];
 ...
 ```
@@ -93,7 +96,7 @@ var_dump(parse_url($url));
 ?>
 ```
 
-위 코드에서 볼 수 있듯이 scheme를 생략한 형태로 parse_url을 사용할 수 있다. 
+위 코드에서 볼 수 있듯이 scheme를 생략한 형태로 parse_url을 사용할 수 있다.
 
 또한 *$_SERVER['REQUEST_URI']*는 *http://www.example.com/path*에서 **http://www.example.com**을 제외한 */path*부분이다.
 
@@ -103,6 +106,4 @@ var_dump(parse_url($url));
 
 ![alt text](/public/upload/160503_1.png "code result")
 
-~~ps. 정작 대회시간 동안에 문제풀 때는 저기가 공략포인트란건 감잡았는데 관련자료를 제대로 안찾아봤을까... ~~
-
-
+--ps. 정작 대회시간 동안에 문제풀 때는 저기가 공략포인트란건 감잡았는데 관련자료를 제대로 안찾아봤을까...--
