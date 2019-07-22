@@ -21,3 +21,4 @@ title: CFP
 | AsiaCCS '20 - December Deadline | Dec 10 | Feb 15, 2020 |
 | USENIX Security '20 - Fall Quarter | Nov 15, 20:00 EDT | Dec 15 / Feb 1, 2020 |
 | USENIX security '20 - Winter Quarter | Feb 15, 2020, 20:00 EDT | Mar 15, 2020 / May 1, 2020 |
+{: .tablelines}
